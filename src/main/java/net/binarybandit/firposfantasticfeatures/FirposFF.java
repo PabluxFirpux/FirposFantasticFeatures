@@ -80,6 +80,7 @@ public class FirposFF {
         if(event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
             event.accept(ModItems.BLUESTONE);
             event.accept(ModBlocks.BLUESTONE_BLOCK);
+            event.accept(ModBlocks.BLUESTONE_ORE);
         }
 
     }
