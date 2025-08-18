@@ -1,6 +1,7 @@
 package net.binarybandit.firposfantasticfeatures;
 
 import net.binarybandit.firposfantasticfeatures.block.ModBlocks;
+import net.binarybandit.firposfantasticfeatures.item.ModCreativeModeTabs;
 import net.binarybandit.firposfantasticfeatures.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
@@ -51,6 +52,8 @@ public class FirposFF {
 
 
         //Registros:
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
