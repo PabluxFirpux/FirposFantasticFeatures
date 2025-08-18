@@ -1,5 +1,7 @@
 package net.binarybandit.firposfantasticfeatures;
 
+import net.binarybandit.firposfantasticfeatures.block.ModBlocks;
+import net.binarybandit.firposfantasticfeatures.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -48,6 +50,10 @@ public class FirposFF {
         modEventBus.addListener(this::commonSetup);
 
 
+        //Registros:
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
@@ -66,7 +72,15 @@ public class FirposFF {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        //Adding items to creative class
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
+            event.accept(ModItems.BLUESTONE);
+            event.accept(ModBlocks.BLUESTONE_BLOCK);
+        }
 
     }
 
