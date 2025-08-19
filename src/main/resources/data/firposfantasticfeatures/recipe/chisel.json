@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:iron_ingot"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "B",
+    "I"
+  ],
+  "result" : {
+    "count": 1,
+    "id": "firposfantasticfeatures:chisel"
+  }
+}
