@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLUESTONE_BLOCK);
                         output.accept(ModBlocks.BLUESTONE_ORE);
                         output.accept(ModItems.CHISEL);
+                        output.accept(ModBlocks.BLUE_GEM_BLOCK);
                     }).build());
 
     public static void register(IEventBus bus) {

@@ -1,6 +1,7 @@
 package net.binarybandit.firposfantasticfeatures.block;
 
 import net.binarybandit.firposfantasticfeatures.FirposFF;
+import net.binarybandit.firposfantasticfeatures.block.custom.BlueGemBlock;
 import net.binarybandit.firposfantasticfeatures.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -21,6 +22,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> BLUESTONE_BLOCK = registerBlock("bluestone_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.BONE_BLOCK)));
+
+    public static final DeferredBlock<Block> BLUE_GEM_BLOCK = registerBlock("blue_gem_block",
+            () -> new BlueGemBlock(BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST_CLUSTER)));
 
     public static final DeferredBlock<Block> BLUESTONE_ORE = registerBlock("bluestone_ore",
             () -> new DropExperienceBlock(UniformInt.of(3,6),BlockBehaviour.Properties.of()
