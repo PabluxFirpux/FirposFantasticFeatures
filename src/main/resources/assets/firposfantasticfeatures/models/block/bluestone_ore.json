@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "firposfantasticfeatures:block/bluestone_ore"
+  }
+}

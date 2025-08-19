@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 50,
+  "experience": 1.0,
+  "group": "bluestone",
+  "ingredient": {
+    "item": "firposfantasticfeatures:bluestone_ore"
+  },
+  "result": {
+    "id": "firposfantasticfeatures:bluestone",
+    "count": 2
+  }
+}
