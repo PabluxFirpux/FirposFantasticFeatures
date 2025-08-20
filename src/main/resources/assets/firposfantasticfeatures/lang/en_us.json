@@ -9,5 +9,12 @@
   "block.firposfantasticfeatures.bluestone_ore": "Bluestone ore",
   "block.firposfantasticfeatures.blue_gem_block": "Blue gem block",
 
-  "creativetab.firposfantasticfeatures.fff": "FFF"
+  "creativetab.firposfantasticfeatures.fff": "FFF",
+
+
+
+  "tooltip.firposfantasticfeatures.blue_gem_block" : "This block is weird and broken :)",
+  "tooltip.firposfantasticfeatures.chisel_shift_down" : "Congrats, you know how to press SHIFT",
+  "tooltip.firposfantasticfeatures.chisel" : "Useful for decorating, press SHIFT for more info",
+  "tooltip.firposfantasticfeatures.bluestone" : "A strange substance, vaguely emanating power"
 }
