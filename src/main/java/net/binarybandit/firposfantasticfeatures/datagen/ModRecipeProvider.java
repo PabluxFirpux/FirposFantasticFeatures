@@ -21,6 +21,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(RecipeOutput recipeOutput) {
         List<ItemLike> BLUESTONE_SMELTABLES = List.of(ModBlocks.BLUESTONE_ORE);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLUE_APPLE.get())
+                .pattern("BBB")
+                .pattern("BAB")
+                .pattern("BBB")
+                .define('B', ModItems.BLUESTONE.get())
+                .define('A', Items.APPLE)
+                .unlockedBy("has_bluestone", has(ModItems.BLUESTONE)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLUE_COAL.get())
+                .pattern("BBB")
+                .pattern("BCB")
+                .pattern("BBB")
+                .define('B', ModItems.BLUESTONE.get())
+                .define('C', Items.COAL)
+                .unlockedBy("has_bluestone", has(ModItems.BLUESTONE)).save(recipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUESTONE_BLOCK.get())
                 .pattern("BBB")
                 .pattern("BBB")

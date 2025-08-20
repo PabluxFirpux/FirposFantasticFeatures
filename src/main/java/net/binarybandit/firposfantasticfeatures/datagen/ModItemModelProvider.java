@@ -15,5 +15,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.BLUESTONE.get());
         basicItem(ModItems.CHISEL.get());
+        basicItem(ModItems.BLUE_APPLE.get());
+        basicItem(ModItems.BLUE_COAL.get());
     }
 }
