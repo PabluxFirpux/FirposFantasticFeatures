@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "firposfantasticfeatures:block/blue_gem_block"
-  }
-}
