@@ -25,6 +25,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLUE_GEM_BLOCK);
                         output.accept(ModItems.BLUE_APPLE);
                         output.accept(ModItems.BLUE_COAL);
+                        output.accept(ModBlocks.BLUEWOOD);
+                        output.accept(ModBlocks.BLUEWOOD_STAIR);
+                        output.accept(ModBlocks.BLUEWOOD_SLAB);
+                        output.accept(ModBlocks.BLUEWOOD_DOOR);
+                        output.accept(ModBlocks.BLUEWOOD_BUTTON);
+                        output.accept(ModBlocks.BLUEWOOD_FENCE);
+                        output.accept(ModBlocks.BLUEWOOD_FENCE_GATE);
+                        output.accept(ModBlocks.BLUEWOOD_WALL);
+                        output.accept(ModBlocks.BLUEWOOD_PRESSUREPLATE);
+                        output.accept(ModBlocks.BLUEWOOD_TRAPDOOR);
                     }).build());
 
     public static void register(IEventBus bus) {

@@ -23,8 +23,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLUESTONE_ORE.get())
                 .add(ModBlocks.BLUE_GEM_BLOCK.get());
 
+        tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.BLUEWOOD.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.BLUESTONE_ORE.get());
+
+        tag(BlockTags.FENCES).add(ModBlocks.BLUEWOOD_FENCE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.BLUEWOOD_FENCE_GATE.get());
+        tag(BlockTags.WALLS).add(ModBlocks.BLUEWOOD_WALL.get());
     }
 }

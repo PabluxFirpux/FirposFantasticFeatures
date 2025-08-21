@@ -29,6 +29,20 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.BLUESTONE_BLOCK.get());
         dropSelf(ModBlocks.BLUE_GEM_BLOCK.get());
+        dropSelf(ModBlocks.BLUEWOOD.get());
+        dropSelf(ModBlocks.BLUEWOOD_STAIR.get());
+        dropSelf(ModBlocks.BLUEWOOD_BUTTON.get());
+        dropSelf(ModBlocks.BLUEWOOD_FENCE.get());
+        dropSelf(ModBlocks.BLUEWOOD_FENCE_GATE.get());
+        dropSelf(ModBlocks.BLUEWOOD_PRESSUREPLATE.get());
+        dropSelf(ModBlocks.BLUEWOOD_TRAPDOOR.get());
+        dropSelf(ModBlocks.BLUEWOOD_WALL.get());
+
+        add(ModBlocks.BLUEWOOD_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.BLUEWOOD_SLAB.get()));
+
+        add(ModBlocks.BLUEWOOD_DOOR.get(),
+                block -> createDoorTable(ModBlocks.BLUEWOOD_DOOR.get()));
 
         add(ModBlocks.BLUESTONE_ORE.get(), block -> createMultipleOreDrops(ModBlocks.BLUESTONE_ORE.get(), ModItems.BLUESTONE.get(), 5f,10f));
     }

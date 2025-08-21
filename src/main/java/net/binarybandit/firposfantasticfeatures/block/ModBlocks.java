@@ -6,10 +6,10 @@ import net.binarybandit.firposfantasticfeatures.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -30,6 +30,37 @@ public class ModBlocks {
     public static final DeferredBlock<Block> BLUESTONE_ORE = registerBlock("bluestone_ore",
             () -> new DropExperienceBlock(UniformInt.of(3,6),BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> BLUEWOOD = registerBlock("bluewood",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(1f).sound(SoundType.WOOD)));
+
+    public static final DeferredBlock<StairBlock> BLUEWOOD_STAIR = registerBlock("bluewood_stair",
+            () -> new StairBlock(ModBlocks.BLUEWOOD.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(1f)));
+
+    public static final DeferredBlock<SlabBlock> BLUEWOOD_SLAB = registerBlock("bluewood_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(1f)));
+
+    public static final DeferredBlock<PressurePlateBlock> BLUEWOOD_PRESSUREPLATE = registerBlock("bluewood_pressureplate",
+            () -> new PressurePlateBlock(BlockSetType.OAK ,BlockBehaviour.Properties.of().strength(1f)));
+
+    public static final DeferredBlock<ButtonBlock> BLUEWOOD_BUTTON = registerBlock("bluewood_button",
+            () -> new ButtonBlock(BlockSetType.OAK , 40 ,BlockBehaviour.Properties.of().strength(1f).noCollission()));
+
+    public static final DeferredBlock<FenceBlock> BLUEWOOD_FENCE = registerBlock("bluewood_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(1f)));
+
+    public static final DeferredBlock<FenceGateBlock> BLUEWOOD_FENCE_GATE = registerBlock("bluewood_fence_gate",
+            () -> new FenceGateBlock(WoodType.OAK ,BlockBehaviour.Properties.of().strength(1f)));
+
+    public static final DeferredBlock<WallBlock> BLUEWOOD_WALL = registerBlock("bluewood_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(1f)));
+
+    public static final DeferredBlock<DoorBlock> BLUEWOOD_DOOR = registerBlock("bluewood_door",
+            () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(1f).noOcclusion()));
+
+    public static final DeferredBlock<TrapDoorBlock> BLUEWOOD_TRAPDOOR = registerBlock("bluewood_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(1f).noOcclusion()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

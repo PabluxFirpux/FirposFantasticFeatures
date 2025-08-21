@@ -6,6 +6,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
@@ -58,6 +59,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(recipeOutput, BLUESTONE_SMELTABLES, RecipeCategory.MISC, ModItems.BLUESTONE.get(), 1f, 100, "bluestone");
         oreBlasting(recipeOutput, BLUESTONE_SMELTABLES, RecipeCategory.MISC, ModItems.BLUESTONE.get(), 1f, 50, "bluestone");
+
+        stairBuilder(ModBlocks.BLUEWOOD_STAIR.get(), Ingredient.of(ModBlocks.BLUEWOOD)).group("bluewood").unlockedBy("has_bluewood", has(ModBlocks.BLUEWOOD)).save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.MISC, ModBlocks.BLUEWOOD_SLAB.get(), ModBlocks.BLUEWOOD.get());
+        wall(recipeOutput, RecipeCategory.MISC, ModBlocks.BLUEWOOD_WALL.get(), ModBlocks.BLUEWOOD.get());
+        fenceBuilder(ModBlocks.BLUEWOOD_FENCE.get(), Ingredient.of(ModBlocks.BLUEWOOD)).group("bluewood").unlockedBy("has_bluewood", has(ModBlocks.BLUEWOOD)).save(recipeOutput);
+        fenceGateBuilder(ModBlocks.BLUEWOOD_FENCE_GATE.get(), Ingredient.of(ModBlocks.BLUEWOOD)).group("bluewood").unlockedBy("has_bluewood", has(ModBlocks.BLUEWOOD)).save(recipeOutput);
+        pressurePlateBuilder(RecipeCategory.MISC, ModBlocks.BLUEWOOD_WALL.get(), Ingredient.of(ModBlocks.BLUEWOOD));
+        trapdoorBuilder(ModBlocks.BLUEWOOD_TRAPDOOR.get(), Ingredient.of(ModBlocks.BLUEWOOD)).group("bluewood").unlockedBy("has_bluewood", has(ModBlocks.BLUEWOOD)).save(recipeOutput);
+        buttonBuilder(ModBlocks.BLUEWOOD_BUTTON.get(), Ingredient.of(ModBlocks.BLUEWOOD)).group("bluewood").unlockedBy("has_bluewood", has(ModBlocks.BLUEWOOD)).save(recipeOutput);
+        doorBuilder(ModBlocks.BLUEWOOD_DOOR.get(), Ingredient.of(ModBlocks.BLUEWOOD)).group("bluewood").unlockedBy("has_bluewood", has(ModBlocks.BLUEWOOD)).save(recipeOutput);
 
     }
 }

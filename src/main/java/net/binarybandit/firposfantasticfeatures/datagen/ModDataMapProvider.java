@@ -1,5 +1,6 @@
 package net.binarybandit.firposfantasticfeatures.datagen;
 
+import net.binarybandit.firposfantasticfeatures.block.ModBlocks;
 import net.binarybandit.firposfantasticfeatures.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -19,5 +20,8 @@ public class ModDataMapProvider extends DataMapProvider {
         super.gather(provider);
 
         this.builder(NeoForgeDataMaps.FURNACE_FUELS).add(ModItems.BLUE_COAL.getId(), new FurnaceFuel(2048), false);
+
+
+        this.builder(NeoForgeDataMaps.FURNACE_FUELS).add(ModBlocks.BLUEWOOD.getId(), new FurnaceFuel(160), false);
     }
 }
