@@ -35,6 +35,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLUEWOOD_WALL);
                         output.accept(ModBlocks.BLUEWOOD_PRESSUREPLATE);
                         output.accept(ModBlocks.BLUEWOOD_TRAPDOOR);
+                        output.accept(ModBlocks.BLUESTONE_LAMP);
                     }).build());
 
     public static void register(IEventBus bus) {

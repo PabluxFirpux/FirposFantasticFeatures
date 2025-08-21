@@ -2,6 +2,7 @@ package net.binarybandit.firposfantasticfeatures.block;
 
 import net.binarybandit.firposfantasticfeatures.FirposFF;
 import net.binarybandit.firposfantasticfeatures.block.custom.BlueGemBlock;
+import net.binarybandit.firposfantasticfeatures.block.custom.BluestoneLampBlock;
 import net.binarybandit.firposfantasticfeatures.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -61,6 +62,9 @@ public class ModBlocks {
 
     public static final DeferredBlock<TrapDoorBlock> BLUEWOOD_TRAPDOOR = registerBlock("bluewood_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().strength(1f).noOcclusion()));
+
+    public static final DeferredBlock<Block> BLUESTONE_LAMP = registerBlock("bluestone_lamp",
+            () -> new BluestoneLampBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().lightLevel(state -> state.getValue(BluestoneLampBlock.CLICKED) ? 15 : 0)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

@@ -37,6 +37,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.BLUEWOOD_PRESSUREPLATE.get());
         dropSelf(ModBlocks.BLUEWOOD_TRAPDOOR.get());
         dropSelf(ModBlocks.BLUEWOOD_WALL.get());
+        dropSelf(ModBlocks.BLUESTONE_LAMP.get());
 
         add(ModBlocks.BLUEWOOD_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.BLUEWOOD_SLAB.get()));
