@@ -1,6 +1,7 @@
 package net.binarybandit.firposfantasticfeatures.item.custom;
 
 import net.binarybandit.firposfantasticfeatures.block.ModBlocks;
+import net.binarybandit.firposfantasticfeatures.component.ModDataComponents;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -52,6 +53,8 @@ public class ChiselItem extends Item {
                         item -> context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
                 level.playSound(null, context.getClickedPos(), SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS);
+
+                context.getItemInHand().set(ModDataComponents.COORDINATES, context.getClickedPos());
             }
         }
 
@@ -64,6 +67,10 @@ public class ChiselItem extends Item {
             tooltipComponents.add(Component.translatable("tooltip.firposfantasticfeatures.chisel_shift_down"));
         } else {
             tooltipComponents.add(Component.translatable("tooltip.firposfantasticfeatures.chisel"));
+        }
+
+        if (stack.get(ModDataComponents.COORDINATES) != null) {
+            tooltipComponents.add(Component.literal("Last block changed at " + stack.get(ModDataComponents.COORDINATES)));
         }
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }

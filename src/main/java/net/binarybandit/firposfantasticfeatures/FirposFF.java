@@ -1,6 +1,7 @@
 package net.binarybandit.firposfantasticfeatures;
 
 import net.binarybandit.firposfantasticfeatures.block.ModBlocks;
+import net.binarybandit.firposfantasticfeatures.component.ModDataComponents;
 import net.binarybandit.firposfantasticfeatures.item.ModCreativeModeTabs;
 import net.binarybandit.firposfantasticfeatures.item.ModItems;
 import net.minecraft.client.Minecraft;
@@ -56,6 +57,8 @@ public class FirposFF {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModDataComponents.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
