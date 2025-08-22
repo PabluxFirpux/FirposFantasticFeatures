@@ -6,10 +6,11 @@ import net.binarybandit.firposfantasticfeatures.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output,ExistingFileHelper existingFileHelper) {
@@ -28,6 +29,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.BLUEWOOD_WALL, ModBlocks.BLUEWOOD);
 
         basicItem(ModBlocks.BLUEWOOD_DOOR.asItem());
+        basicItem(ModItems.BLUE_IRON_INGOT.get());
+
+        handHeldItem(ModItems.BLUE_IRON_PICKAXE);
+        handHeldItem(ModItems.BLUE_IRON_SHOVEL);
+        handHeldItem(ModItems.BLUE_IRON_SWORD);
+        handHeldItem(ModItems.BLUE_IRON_AXE);
     }
 
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
@@ -46,5 +53,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(block.getId().getPath(), mcLoc("block/polished_blackstone_wall_inventory"))
                 .texture("texture", ResourceLocation.fromNamespaceAndPath(FirposFF.MODID,
                         "block/" + baseBlock.getId().getPath()));
+    }
+
+    private ItemModelBuilder handHeldItem(DeferredItem<?> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(FirposFF.MODID, "item/" + item.getId().getPath()));
     }
 }

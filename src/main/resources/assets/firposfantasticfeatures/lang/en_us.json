@@ -4,6 +4,12 @@
   "item.firposfantasticfeatures.blue_apple": "Blue Apple",
   "item.firposfantasticfeatures.blue_coal": "Blue Coal",
 
+  "item.firposfantasticfeatures.blue_iron_ingot": "Blue iron ingot",
+  "item.firposfantasticfeatures.blue_iron_sword": "Blue iron sword",
+  "item.firposfantasticfeatures.blue_iron_pickaxe": "Blue iron pickaxe",
+  "item.firposfantasticfeatures.blue_iron_axe": "Blue iron axe",
+  "item.firposfantasticfeatures.blue_iron_shovel": "Blue iron shovel",
+
 
   "block.firposfantasticfeatures.bluestone_block": "Bluestone block",
   "block.firposfantasticfeatures.bluestone_ore": "Bluestone ore",
@@ -27,5 +33,6 @@
   "tooltip.firposfantasticfeatures.blue_gem_block" : "This block is weird and broken :)",
   "tooltip.firposfantasticfeatures.chisel_shift_down" : "Congrats, you know how to press SHIFT",
   "tooltip.firposfantasticfeatures.chisel" : "Useful for decorating, press SHIFT for more info",
-  "tooltip.firposfantasticfeatures.bluestone" : "A strange substance, vaguely emanating power"
+  "tooltip.firposfantasticfeatures.bluestone" : "A strange substance, vaguely emanating power",
+  "tooltip.firposfantasticfeatures.blue_iron_ingot" : "A vibrant, flexible and sturdy metal. Highly enchantable and fast"
 }

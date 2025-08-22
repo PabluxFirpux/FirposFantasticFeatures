@@ -70,5 +70,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         buttonBuilder(ModBlocks.BLUEWOOD_BUTTON.get(), Ingredient.of(ModBlocks.BLUEWOOD)).group("bluewood").unlockedBy("has_bluewood", has(ModBlocks.BLUEWOOD)).save(recipeOutput);
         doorBuilder(ModBlocks.BLUEWOOD_DOOR.get(), Ingredient.of(ModBlocks.BLUEWOOD)).group("bluewood").unlockedBy("has_bluewood", has(ModBlocks.BLUEWOOD)).save(recipeOutput);
 
+
     }
 }

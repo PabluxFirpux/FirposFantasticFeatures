@@ -24,5 +24,9 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ModTags.Items.TRANSMUTED_BY_BLUE_GEM)
             .add(ModItems.BLUESTONE.get());
 
+        tag(ItemTags.SWORDS).add(ModItems.BLUE_IRON_SWORD.get());
+        tag(ItemTags.PICKAXES).add(ModItems.BLUE_IRON_PICKAXE.get());
+        tag(ItemTags.SHOVELS).add(ModItems.BLUE_IRON_SHOVEL.get());
+        tag(ItemTags.AXES).add(ModItems.BLUE_IRON_AXE.get());
     }
 }
